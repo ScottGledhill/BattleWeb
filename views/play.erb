@@ -10,14 +10,12 @@
 
 <% if @game.current_turn == @game.player1.name %>
 
-Player 1 attack
 <form action="/player1_attack" method="get">
   <input type="submit" value="Attack">
 </form>
 
 <% elsif @game.current_turn == @game.player2.name  %>
 
-Player 2 attack
 <form action="/player2_attack" method="get">
   <input type="submit" value="Attack">
 </form>

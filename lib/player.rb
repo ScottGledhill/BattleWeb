@@ -13,5 +13,8 @@ class Player
   def receive_damage
     @points -= 10
   end
-  
+
+  def lost?
+    @points <= 0
+  end
 end
