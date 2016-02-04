@@ -1,6 +1,6 @@
 
 feature 'attack player' do
-  let(:player) { 'Dave' }
+  let(:player1) { 'Dave' }
   let(:player2) { 'Mittens'}
   # As Player 1,
   # So I can win a game of Battle,
@@ -8,7 +8,7 @@ feature 'attack player' do
   scenario 'confirm attack' do
     sign_in_and_play
     click_button 'Attack'
-    expect(page).to have_content "#{player} has attacked Mittens"
+    expect(page).to have_content "#{player1} has attacked Mittens"
   end
 
   # As Player 1,
