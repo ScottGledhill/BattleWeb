@@ -18,10 +18,19 @@ class MyApp < Sinatra::Base
     erb :play
   end
 
-  get '/attack' do
+  get '/player1_attack' do
     @game = $game
     $game.attack(@game.player2)
-    erb :attack
+    $game.switch_turn
+    erb :player1_attack
   end
+
+  get '/player2_attack' do
+    @game = $game
+    $game.attack(@game.player1)
+    $game.switch_turn
+    erb :player2_attack
+  end
+
   run! if app_file == $0
 end

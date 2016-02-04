@@ -1,0 +1,7 @@
+<%= @game.player2.name %> has attacked <%= @game.player1.name %><br>
+
+<%= @game.player1.name %> now has <%= @game.player1.points %> points
+
+<form action="/play" method="get">
+  <input type="submit" value="Back">
+</form>
