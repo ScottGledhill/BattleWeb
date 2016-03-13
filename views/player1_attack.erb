@@ -1,0 +1,15 @@
+<%= @game.player1.name %> has attacked <%= @game.player2.name %><br>
+
+<%= @game.player2.name %> now has <%= @game.player2.points %> points
+
+<% if $game.player2.lost? %>
+
+  <h1> YOU WIN YOU SEXY FUCK </h1>
+
+  <% else %>
+
+<form action="/play" method="get">
+  <input type="submit" value="Back">
+</form>
+
+<% end %>
